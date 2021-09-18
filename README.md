@@ -148,3 +148,6 @@ Ehhez használd a Thymeleaf sablonmotort! (1 pont)
 # Licenc
 
 A feladatok szövege és a projektváz felhasználása csak a szerző engedélyével lehetséges.
+
+#Postman Link
+https://moresummerlessspring.postman.co/workspace/0300f023-3b55-4411-b6ac-08d7bdfeb2d0
