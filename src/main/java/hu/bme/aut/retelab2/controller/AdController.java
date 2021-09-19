@@ -38,7 +38,12 @@ public class AdController {
 
     @GetMapping("{tag}")
     public ResponseEntity<List<Ad>> getByTags(@PathVariable String tag){
-        return new ResponseEntity<List<Ad>>(adRepository.findByTag(tag),HttpStatus.OK);
+        List<Ad> response = adRepository.findByTag(tag);
+        for(int i = 0;  i < response.size(); i++){
+            response.get(i).setSecretToken("0");
+        }
+        return new ResponseEntity<List<Ad>>(response,HttpStatus.OK);
+        //return new ResponseEntity<List<Ad>>(adRepository.findByTag(tag),HttpStatus.OK);
     }
 
     @PostMapping
@@ -83,6 +88,5 @@ public class AdController {
             return new ResponseEntity<>(null,HttpStatus.FORBIDDEN);
         }
     }
-
 
 }
